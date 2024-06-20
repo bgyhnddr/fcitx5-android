@@ -214,9 +214,9 @@ class KawaiiBarComponent : UniqueViewComponent<KawaiiBarComponent, FrameLayout>(
                 clipboardButton.setOnClickListener {
                     windowManager.attachWindow(ClipboardWindow())
                 }
-                moreButton.setOnClickListener {
-                    windowManager.attachWindow(StatusAreaWindow())
-                }
+//                moreButton.setOnClickListener {
+//                    windowManager.attachWindow(StatusAreaWindow())
+//                }
             }
             clipboardUi.suggestionView.apply {
                 setOnClickListener {

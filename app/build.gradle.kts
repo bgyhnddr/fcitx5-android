@@ -34,8 +34,20 @@ android {
         }
     }
 
+    signingConfigs {
+        create("key") {
+            storeFile = file("utcook.keystore")
+            storePassword = "utcook"
+            //别名
+            keyAlias = "utcook"
+            //别名密码
+            keyPassword = "utcook"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("key")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -46,6 +58,7 @@ android {
             resValue("string", "app_name", "@string/app_name_release")
         }
         debug {
+            signingConfig = signingConfigs.getByName("key")
             resValue("mipmap", "app_icon", "@mipmap/ic_launcher_debug")
             resValue("mipmap", "app_icon_round", "@mipmap/ic_launcher_round_debug")
             resValue("string", "app_name", "@string/app_name_debug")

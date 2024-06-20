@@ -36,6 +36,6 @@ class ButtonsBarUi(override val ctx: Context, private val theme: Theme) : Ui {
 
     val clipboardButton = toolButton(R.drawable.ic_clipboard)
 
-    val moreButton = toolButton(R.drawable.ic_baseline_more_horiz_24)
+//    val moreButton = toolButton(R.drawable.ic_baseline_more_horiz_24)
 
 }
